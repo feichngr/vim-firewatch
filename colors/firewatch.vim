@@ -18,6 +18,7 @@ let s:pink      = 181
 let s:pink_dark = 131
 let s:tan       = 180
 let s:white     = 255
+let s:gray_light= 242
 let s:gray      = 249
 let s:gray_dark = 236
 
@@ -31,11 +32,13 @@ let s:hex_pink      = "#c8ae9d"
 let s:hex_pink_dark = "#be5046"
 let s:hex_tan       = "#e5c07b"
 let s:hex_white     = "#ebebff"
+let s:hex_gray_light= "#5c6370"
 let s:hex_gray      = "#abb2bf"
 let s:hex_gray_dark = "#282c34"
 
 " aliases
 exe "let s:bg_none      = ' guibg=NONE                  ctermbg=NONE'"
+exe "let s:bg_gray_dark = ' guibg=" .s:hex_gray_dark. " ctermbg=" .s:gray_dark. "'"
 exe "let s:fg_cyan      = ' guifg=" .s:hex_cyan.      " ctermfg=" .s:cyan. "'"
 exe "let s:fg_blue      = ' guifg=" .s:hex_blue.      " ctermfg=" .s:blue. "'"
 exe "let s:fg_red       = ' guifg=" .s:hex_red.       " ctermfg=" .s:red. "'"
@@ -45,6 +48,7 @@ exe "let s:fg_pink      = ' guifg=" .s:hex_pink.      " ctermfg=" .s:pink. "'"
 exe "let s:fg_pink_dark = ' guifg=" .s:hex_pink_dark. " ctermfg=" .s:pink_dark. "'"
 exe "let s:fg_tan       = ' guifg=" .s:hex_tan.       " ctermfg=" .s:tan. "'"
 exe "let s:fg_white     = ' guifg=" .s:hex_white.     " ctermfg=" .s:white. "'"
+exe "let s:fg_gray_light= ' guifg=" .s:hex_gray_light " ctermfg=" .s:gray_light. "'"
 exe "let s:fg_gray      = ' guifg=" .s:hex_gray.      " ctermfg=" .s:gray. "'"
 exe "let s:fg_gray_dark = ' guifg=" .s:hex_gray_dark. " ctermfg=" .s:gray_dark. "'"
 exe "let s:bold         = ' cterm=BOLD'"
@@ -52,8 +56,8 @@ exe "let s:italic       = ' cterm=ITALIC'"
 exe "let s:underline    = ' cterm=UNDERLINE'"
 
 " definitions
-exe "hi! Normal"       .s:bg_none .s:fg_gray
-exe "hi! Comment"      .s:bg_none .s:fg_gray_dark
+exe "hi! Normal"       .s:bg_gray_dark .s:fg_gray
+exe "hi! Comment"      .s:bg_none .s:fg_gray_light
 exe "hi! Constant"     .s:bg_none .s:fg_red
 exe "hi! String"       .s:bg_none .s:fg_tan
 exe "hi! Identifier"   .s:bg_none .s:fg_white
